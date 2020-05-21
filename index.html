@@ -1,0 +1,948 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HULK</title>
+  <meta name="description" content="HULK is a benchmarking platform for efficiency of natural language processing models.">
+  <meta name="keywords" content="Natural Language Processing">
+  <meta name="author" content="HULK">
+
+  <link rel="icon" href="dist/pic/favicon.ico">
+
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/fonts.css">
+  <link rel="stylesheet" href="dist/css/custom.css">
+</head>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" defer></script>
+
+<script type="text/javascript" class="init">
+  $(document).ready(function() {
+    $('#pretraining').DataTable();
+    $('#fine-tuning-time').DataTable();
+    $('#fine-tuning-cost').DataTable();
+    $('#inference-time').DataTable();
+    $('#inference-cost').DataTable();
+  } );
+</script>
+
+<body class="vsc-initialized">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><b>HULK</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="content">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><b>LeaderBoard</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="download.html">Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://arxiv.org/abs/2002.05829" target="_blank">Paper</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:xiyou@cs.ucsb.edu">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-5 HULK-dark-green">HULK</h1>
+    <p class="lead HULK-dark-green">Save the world, one flop at a time. <br>An Energy Efficiency Benchmark Platform for Responsible Natural Language Processing</p>
+  </div>
+</div>
+
+<br>
+
+<div class="container" align="justify">
+
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Pretraining Phase - Compare Time & Cost</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <table class="table", id = "pretraining">
+        <thead>
+        <tr>
+          <th>Submission Time</th>
+          <th> Time (hours) </th>
+          <th> Cost ($) </th>
+          <th> Parameter (M) </th>
+          <th>Source</th>
+          <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 96 </td>
+          <td> 1,728 </td>
+          <td> 108 </td>
+          <td>
+            BERT-Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 4 TPU Pods, TensorFlow </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 96 </td>
+          <td> 6,912 </td>
+          <td> 334 </td>
+          <td>
+            BERT-Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 16 TPU Pods, TensorFlow </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 60 </td>
+          <td> 61,440 </td>
+          <td> 361 </td>
+          <td>
+            XLNet-Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 512 TPU v3 </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 24 </td>
+          <td> 75,203 </td>
+          <td> 125 </td>
+          <td>
+            RoBERTa Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 1024 V100 GPUs </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 24 </td>
+          <td> 75,203 </td>
+          <td> 356 </td>
+          <td>
+            RoBERTa Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 1024 V100 GPUs </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 36 </td>
+          <td> 65,536 </td>
+          <td> 223 </td>
+          <td>
+            ALBERT-XXLarge
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 1024 TPU v3 </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 90 </td>
+          <td> 2203.2 </td>
+          <td> 66 </td>
+          <td>
+            BERT-Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> 8×16G V100 GPU </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Fine-Tuning Phase - Compare Time</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <table class="table", id = "fine-tuning-time">
+        <thead>
+        <tr>
+          <th>Submission Time</th>
+          <th> NER (sec) </th>
+          <th> SST-2 (sec) </th>
+          <th> MNLI (sec) </th>
+          <th> Score </th>
+          <th>Source</th>
+          <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 43.43 </td>
+          <td> 207.15 </td>
+          <td> N/R </td>
+          <td> 2.52 </td>
+          <td>
+            BERT Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 90.26 </td>
+          <td> 92.45 </td>
+          <td> 9,106.72 </td>
+          <td> 3.00 </td>
+          <td>
+            BERT Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 67.14 </td>
+          <td> 102.45 </td>
+          <td> 7,704.71 </td>
+          <td> 3.42 </td>
+          <td>
+            XLNet Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 243.00 </td>
+          <td> 367.11 </td>
+          <td> 939.62 </td>
+          <td> 10.31 </td>
+          <td>
+            XLNet Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 70.57 </td>
+          <td> 38.45 </td>
+          <td> 274.87 </td>
+          <td> 10.82 </td>
+          <td>
+            RoBERTa Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 155.43 </td>
+          <td> 57.65 </td>
+          <td> 397.12 </td>
+          <td> 25.11 </td>
+          <td>
+            RoBERTa Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 340.64 </td>
+          <td> 2767.90 </td>
+          <td> 16995.35 </td>
+          <td> 0.83 </td>
+          <td>
+            ALBERT v1 Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 844.85 </td>
+          <td> 3708.49 </td>
+          <td> N/R </td>
+          <td> 0.13 </td>
+          <td>
+            ALBERT v1 Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        </tbody>
+      </table>
+      <p>* N/R means that the model does not reach the required performance in reasonable time.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Fine-tuning Phase - Compare Cost </h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <table class="table", id = "fine-tuning-cost">
+        <thead>
+        <tr>
+          <th>Submission Time</th>
+          <th> NER ($) </th>
+          <th> SST-2 ($) </th>
+          <th> MNLI ($) </th>
+          <th> Score </th>
+          <th>Source</th>
+          <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.04 </td>
+          <td> 0.18 </td>
+          <td> N/R </td>
+          <td> 2.52 </td>
+          <td>
+            BERT Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.08 </td>
+          <td> 0.08 </td>
+          <td> 7.74 </td>
+          <td> 3.00 </td>
+          <td>
+            BERT Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.06 </td>
+          <td> 0.09 </td>
+          <td> 6.55 </td>
+          <td> 3.42 </td>
+          <td>
+            XLNet Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.21 </td>
+          <td> 0.31 </td>
+          <td> 0.80 </td>
+          <td> 10.31 </td>
+          <td>
+            XLNet Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 70.57 </td>
+          <td> 38.45 </td>
+          <td> 274.87 </td>
+          <td> 10.82 </td>
+          <td>
+            RoBERTa Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.13 </td>
+          <td> 0.05 </td>
+          <td> 0.34 </td>
+          <td> 25.11 </td>
+          <td>
+            RoBERTa Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.29 </td>
+          <td> 2.35 </td>
+          <td> 14.45 </td>
+          <td> 0.83 </td>
+          <td>
+            ALBERT v1 Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.72 </td>
+          <td> 3.15 </td>
+          <td> N/R </td>
+          <td> 0.13 </td>
+          <td>
+            ALBERT v1 Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        </tbody>
+      </table>
+      <p>* GTX 2080 Ti Results are estimated using p2.3xlarge on AWS at $3.06/h.</br>
+        * N/R means that the model does not reach the required performance in reasonable time.</p>
+
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Inference Phase - Compare Time per single input</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <table class="table", id = "inference-time">
+        <thead>
+        <tr>
+          <th>Submission Time</th>
+          <th> NER (ms) </th>
+          <th> SST-2 (ms) </th>
+          <th> MNLI (ms) </th>
+          <th> Score </th>
+          <th>Source</th>
+          <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 2.68  </td>
+          <td> 2.70 </td>
+          <td> 2.67 </td>
+          <td> 9.5 </td>
+          <td>
+            BERT Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 8.51 </td>
+          <td> 8.46 </td>
+          <td> 8.53 </td>
+          <td> 3.00 </td>
+          <td>
+            BERT Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 5.16 </td>
+          <td> 5.01 </td>
+          <td> 5.10 </td>
+          <td> 5.01 </td>
+          <td>
+            XLNet Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 14.84</td>
+          <td> 14.69 </td>
+          <td> 15.27 </td>
+          <td> 1.71 </td>
+          <td>
+            XLNet Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 2.65 </td>
+          <td> 2.68 </td>
+          <td> 2.70 </td>
+          <td> 9.53 </td>
+          <td>
+            RoBERTa Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 8.35 </td>
+          <td> 8.36 </td>
+          <td> 8.70 </td>
+          <td> 3.01 </td>
+          <td>
+            RoBERTa Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 2.65 </td>
+          <td> 2.68 </td>
+          <td> 2.72 </td>
+          <td> 9.53 </td>
+          <td>
+            ALBERT v1 Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 8.49 </td>
+          <td> 8.44 </td>
+          <td> 8.78 </td>
+          <td> 2.97 </td>
+          <td>
+            ALBERT v1 Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </br>
+  </br>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Inference Phase - Compare Cost per 100,000 inputs</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <table class="table", id = "inference-cost">
+        <thead>
+        <tr>
+          <th>Submission Time</th>
+          <th> NER ($) </th>
+          <th> SST-2 ($) </th>
+          <th> MNLI ($) </th>
+          <th> Score </th>
+          <th>Source</th>
+          <th>Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 9.5 </td>
+          <td>
+            BERT Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.72 </td>
+          <td> 0.72 </td>
+          <td> 0.73 </td>
+          <td> 3.00 </td>
+          <td>
+            BERT Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.44 </td>
+          <td> 0.43 </td>
+          <td> 0.43 </td>
+          <td> 5.01 </td>
+          <td>
+            XLNet Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 1.26</td>
+          <td> 1.25 </td>
+          <td> 1.30 </td>
+          <td> 1.71 </td>
+          <td>
+            XLNet Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 9.53 </td>
+          <td>
+            RoBERTa Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.71 </td>
+          <td> 0.71 </td>
+          <td> 0.74 </td>
+          <td> 3.01 </td>
+          <td>
+            RoBERTa Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 0.23 </td>
+          <td> 9.53 </td>
+          <td>
+            ALBERT v1 Base
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        <tr class="item">
+          <td>
+            <p class="date">Nov 2019</p>
+          </td>
+
+          <td> 0.72 </td>
+          <td> 0.72 </td>
+          <td> 0.75 </td>
+          <td> 2.97 </td>
+          <td>
+            ALBERT v1 Large
+            <p class="author"><a href="mailto:xiyou@cs.ucsb.edu">HULK Baseline</a></p>
+          </td>
+          <td> GTX-2080 Ti </td>
+        </tr>
+
+        </tbody>
+      </table>
+      <p>* GTX 2080 Ti Results are estimated using p2.3xlarge on AWS at $3.06/h.</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Sponsor</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb" <h6="">We thank <a href="https://iee.ucsb.edu/">the Institute for Energy Efficienc</a> at UC Santa Barbara for their support.
+    <img src="dist/pic/IEE.png" class="rounded img-fluid d-block" border="5">
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+    <h4>Paper</h4>
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+    <h6>Please cite our paper as below if you use the HULK platform.</h6>
+    <pre><code>
+@misc{zhou2020hulk,
+    title={HULK: An Energy Efficiency Benchmark Platform for Responsible Natural Language Processing},
+    author={Xiyou Zhou and Zhiyu Chen and Xiaoyong Jin and William Yang Wang},
+    year={2020},
+    eprint={2002.05829},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+                        </code></pre>
+
+  </div>
+</div>
+
+</div>
+
+<br>
+
+<div class="container" align="justify">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Contact</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <a href="mailto:xiyou@cs.ucsb.edu" target="_blank">
+        <img src="dist/pic/mail.png" class="center" style="height:5rem; width:5rem;">
+      </a>
+      <br>
+      <center><h6>Have any questions or suggestions? Feel free to contact us!</h6></center>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<hr>
+
+<div class="container footer">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+      <p>
+        Copyright © UCSB NLP Group<br>
+        3530 Phelps Hall<br>
+        University of California, Santa Barbara<br>
+        Santa Barbara, CA 93106-5110
+      </p>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+      <p>
+        HULK is produced by USCB NLP Lab.<br>
+        The platform is under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
+        Contact the HULK admin by <a href="mailto:xiyou@cs.ucsb.edu" target="_blank">xiyou@cs.ucsb.edu</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src="dist/js/bootstrap.js"></script>
+
+
+</body></html>

@@ -1,0 +1,165 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>HULK</title>
+  <meta name="description" content="HULK is a benchmarking platform for efficiency of natural language processing models.">
+  <meta name="keywords" content="Natural Language Processing">
+  <meta name="author" content="HULK">
+
+  <link rel="icon" href="dist/pic/favicon.ico">
+
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/fonts.css">
+  <link rel="stylesheet" href="dist/css/custom.css">
+</head>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" defer></script>
+
+<script type="text/javascript" class="init">
+  $(document).ready(function() {
+    $('#pretraining').DataTable();
+    $('#fine-tuning-time').DataTable();
+    $('#fine-tuning-cost').DataTable();
+    $('#inference-time').DataTable();
+    $('#inference-cost').DataTable();
+  } );
+</script>
+
+<body class="vsc-initialized">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><b>HULK</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="content">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html"><b>LeaderBoard</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="download.html">Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://arxiv.org/abs/2002.05829" target="_blank">Paper</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:xiyou@cs.ucsb.edu">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-5 HULK-dark-green">HULK</h1>
+    <p class="lead HULK-dark-green">Save the world, one flop at a time. <br>An Energy Efficiency Benchmark Platform for Responsible Natural Language Processing</p>
+  </div>
+</div>
+
+<br>
+
+<div class="container" align="justify">
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+    <h4>Downloading Links</h4>
+    <hr>
+  </div>
+</div>
+
+<a class="nav-link" href="https://sites.engineering.ucsb.edu/~xiyou/data/conll2003.zip">CoNLL 2003</a>
+<a class="nav-link" href="https://sites.engineering.ucsb.edu/~xiyou/data/sst-2.zip">SST-2</a>
+<a class="nav-link" href="https://sites.engineering.ucsb.edu/~xiyou/data/mnli.zip">MNLI</a>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+    <h4>Paper</h4>
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+    <h6>Please cite our paper as below if you use the HULK platform.</h6>
+    <pre><code>
+@misc{zhou2020hulk,
+    title={HULK: An Energy Efficiency Benchmark Platform for Responsible Natural Language Processing},
+    author={Xiyou Zhou and Zhiyu Chen and Xiaoyong Jin and William Yang Wang},
+    year={2020},
+    eprint={2002.05829},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+                        </code></pre>
+
+  </div>
+</div>
+
+</div>
+
+<br>
+
+<div class="container" align="justify">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <h4>Contact</h4>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 thumb">
+      <a href="mailto:xiyou@cs.ucsb.edu" target="_blank">
+        <img src="dist/pic/mail.png" class="center" style="height:5rem; width:5rem;">
+      </a>
+      <br>
+      <center><h6>Have any questions or suggestions? Feel free to contact us!</h6></center>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<hr>
+
+<div class="container footer">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+      <p>
+        Copyright © UCSB NLP Group<br>
+        3530 Phelps Hall<br>
+        University of California, Santa Barbara<br>
+        Santa Barbara, CA 93106-5110
+      </p>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 thumb">
+      <p>
+        HULK is produced by USCB NLP Lab.<br>
+        The platform is under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.<br>
+        Contact the HULK admin by <a href="mailto:xiyou@cs.ucsb.edu" target="_blank">xiyou@cs.ucsb.edu</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src="dist/js/bootstrap.js"></script>
+
+
+</body></html>
